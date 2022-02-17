@@ -3,8 +3,6 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\ApiController;
-use App\Http\Requests\UserStoreRequest;
-use App\Models\InfoUrl;
 use App\Models\PushNotificationPlatform;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
