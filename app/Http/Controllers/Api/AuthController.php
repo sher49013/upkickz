@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\ApiController;
 use App\Http\Requests\UserStoreRequest;
 use App\Models\InfoUrl;
+use App\Models\PushNotificationPlatform;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -169,5 +170,11 @@ class AuthController extends ApiController
 
         auth('api')->logout();
         return $this->successResponse("User logged out successfully");
+    }
+
+    public function getPushNotificationPlatform()
+    {
+        $plateForm = PushNotificationPlatform::get();
+        return $this->successResponse("Push Notification Platform List", $plateForm);
     }
 }
